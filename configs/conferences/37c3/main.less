@@ -1,11 +1,11 @@
 @import "../../../assets/css/_structure.less";
 
-@blue: #3141F5;
-@red: #CD4D47;
-@green: #9DFC75;
-@cyan: #7AFBFD;
-@magenta: #CD46F7;
-@yellow: #F6F688;
+@blue: #2D42FF;
+@red: #DE4040;
+@green: #79FF5E;
+@cyan: #29FFFF;
+@magenta: #DE37FF;
+@yellow: #F6F675;
 
 @white: #ffffff;
 @grey-lighter: #333333;
@@ -25,15 +25,20 @@
 @schedule-selected-room: @cyan;
 @schedule-now-bg: @red;
 
-
+@font-face {
+    font-family: 'Gabriella';
+    src: url('GabriellaHeavy.otf') format('opentype');
+    font-weight: heavy;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Mona Sans';
-    src: font-url('../../../assets/fonts/Mona-Sans.woff2') format('woff2');
+    src: url('Mona-Sans.woff2') format('woff2');
     font-weight: normal;
 }
 @font-face {
     font-family: 'VCR OCD Faux';
-    src: font-url('../../../assets/fonts/VCROCDFaux.woff2') format('woff2'), font-url('../../../assets/fonts/VCROCDFaux.woff') format('woff'), font-url('../../../assets/fonts/VCROCDFaux.ttf') format('truetype');
+    src: url('VCROCDFaux.woff2') format('woff2'), url('VCROCDFaux.woff') format('woff'), url('VCROCDFaux.ttf') format('truetype');
     font-weight: normal;
 }
 
@@ -129,15 +134,16 @@ nav .navbar-brand {
   color: #202020;
 }
 
-.btn-primary, .btn-default {
-  background-color: #2D42FF;
-  border-color: #2D42FF;
+.btn-primary, .btn-default, ul.nav li {
+  background-color: #29FFFF;
+  border-color: #29FFFF;
   color: #FFFFFF;
 }
 
-.btn-primary:hover, .btn-default:hover {
-  background-color: #0B1575;
-  border-color: #0B1575;
+
+.btn-primary:hover, .btn-default:hover, ul.nav li:hover {
+  background-color: #006b6b;
+  border-color: #006b6b;
   color: #FFFFFF;
 }
 
@@ -154,14 +160,58 @@ nav .navbar-brand {
   color: #D9D9D9
 }
 
+.form-group {
+    input, textarea, select {
+	background-color: #202020;
+	border: 2px solid #29FFFF;
+	color: #ffffff;
+    }
+
+    input[type='checkbox'] {
+	accent-color: #29FFFF;
+    }
+
+    input[type='checkbox']:checked {
+	background-color: #006B6B;
+    }
+
+}
+
 .t {
     color: #F6F675;
 }
 
-.panel-title, .panel-body a {
+.panel-title, .panel-body, a {
     color: #70FF53;
+}
+a:hover {
+    color: #3b8d18;
+}
+
+h1 {
+    color: #DE37FF;
+    font-family: 'Gabriella';
+    transform: scale(1, 1.62);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5em;
+}
+
+.group-live h2 {
+    color: #DE37FF;
+    font-family: 'Gabriella';
+    transform: scale(1, 1.62);
+    letter-spacing: 0.02em;
 }
 
 h2 {
-    color: #DE37FF;
+  font-family: 'Mona Sans';
+  letter-spacing: -0.01em;
+  font-weight: bold;
+  border-bottom: #0B1575 1px;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'VCR OCD Faux';
+  letter-spacing: -0.01em;
+  border-bottom: #0B1575 1px;
 }
