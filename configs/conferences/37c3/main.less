@@ -43,121 +43,121 @@
 }
 
 body {
-	background-color: black;
-	color: @grey-light;
-	padding-top: 75px;
-	font-family: 'Mona Sans';
-	letter-spacing: -0.01em;
+    background-color: black;
+    color: @grey-light;
+    padding-top: 75px;
+    font-family: 'Mona Sans';
+    letter-spacing: -0.01em;
 }
 
 .overview .panel-title {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .outer-div {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 
-	@media (max-width: @screen-sm-min) {
-		display: none;
-	}
+    @media (max-width: @screen-sm-min) {
+	display: none;
+    }
 }
 
 nav {
-	height:75px;
+    height:75px;
 }
 nav .button-wrapper.navbar-right {
-	margin-top: 12px;
+    margin-top: 12px;
 }
 
 nav .navbar-brand .icon {
-	background-image: url(37c3-logo-full.svg);
-	background-size: 100px 100px;
-	width: 100px;
-	height: 100px;
-	margin-top: -25px;
+    background-image: url(37c3-logo-full.svg);
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    margin-top: -25px;
 }
 nav .navbar-brand {
-	color: transparent !important;
+    color: transparent !important;
 }
 
 .congress {
-	background-image: url(37c3-key-visual.svg);
-	background-repeat: no-repeat;
-	background-size: 400px 600px;
+    background-image: url(37c3-key-visual.svg);
+    background-repeat: no-repeat;
+    background-size: 400px 600px;
 
-	position: fixed;
-	left: -50px;
-	//bottom: 100px;
+    position: fixed;
+    left: -50px;
+    //bottom: 100px;
 
-	width: 400px;
-	height: 780px;
+    width: 400px;
+    height: 780px;
 
-	opacity: 1;
-	z-index: -100;
+    opacity: 1;
+    z-index: -100;
 
-	@media (max-width: @screen-sm-min) {
-		display: none;
-	}
+    @media (max-width: @screen-sm-min) {
+	display: none;
+    }
 }
 
 .congress-motto {
-	background-image: url(37c3-logo-full.svg);
-	background-repeat: no-repeat;
-	background-size: 116px 780px;
+    background-image: url(37c3-logo-full.svg);
+    background-repeat: no-repeat;
+    background-size: 116px 780px;
 
-	position: fixed;
-	right: 10px;
-	//bottom: 100px;
+    position: fixed;
+    right: 10px;
+    //bottom: 100px;
 
-	width: 116px;
-	height: 780px;
+    width: 116px;
+    height: 780px;
 
-	opacity: 1;
-	z-index: -100;
+    opacity: 1;
+    z-index: -100;
 
-	@media (max-width: @screen-sm-min) {
-		display: none;
-	}
+    @media (max-width: @screen-sm-min) {
+	display: none;
+    }
 }
 
 .btn {
-  font-family: 'VCR OCD Faux';
-  letter-spacing: -0.01em;
+    font-family: 'VCR OCD Faux';
+    letter-spacing: -0.01em;
 }
 
 .navbar .btn.btn-default, body.page-start .search .btn {
-  background-color: #29FFFF;
-  border-color: #29FFFF;
-  color: #202020;
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
 }
 
 .btn-primary, .btn-default, ul.nav li {
-  background-color: #29FFFF;
-  border-color: #29FFFF;
-  color: #FFFFFF;
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
 }
 
 
 .btn-primary:hover, .btn-default:hover, ul.nav li:hover {
-  background-color: #006b6b;
-  border-color: #006b6b;
-  color: #FFFFFF;
+    background-color: #006b6b;
+    border-color: #006b6b;
+    color: #FFFFFF;
 }
 
 .btn-primary.active, .btn-default.active {
-  background-color: #29FFFF;
-  border-color: #29FFFF;
-  color: #202020;
+    background-color: #29FFFF;
+    border-color: #29FFFF;
+    color: #202020;
 }
 
 .navbar .btn.btn-default:hover, body.page-start .search .btn:hover,
 .btn-primary.active:hover, .btn-default.active:hover {
-  background-color: #006B6B;
-  border-color: #006B6B;
-  color: #D9D9D9
+    background-color: #006B6B;
+    border-color: #006B6B;
+    color: #D9D9D9
 }
 
 .form-group {
@@ -167,14 +167,46 @@ nav .navbar-brand {
 	color: #ffffff;
     }
 
+    input[type='submit'] {
+	background-color: #29FFFF;
+	border-color: #29FFFF;
+	color: #202020;
+    }
+    input[type='submit']:hover {
+	background-color: #006B6B;
+	border-color: #006B6B;
+	color: #D9D9D9
+    }
+
+    /* TODO - breaks alignment */
     input[type='checkbox'] {
-	accent-color: #29FFFF;
+	background-color: #202020;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	width: 14px !important;
+	height: 14px !important;
+	margin: 5px;
+	outline: 1px solid #29FFFF;
+	box-shadow: none;
+	font-size: 0.8em;
+	text-align: center;
+	line-height: 1em;
+    }
+    input[type='checkbox']:checked:after {
+	content: '✔';
+	color: #d9d9d9;
     }
 
     input[type='checkbox']:checked {
 	background-color: #006B6B;
     }
 
+}
+
+.panel, .panel-default > .panel-heading {
+    border-color: @blue;
 }
 
 .t {
@@ -204,14 +236,18 @@ h1 {
 }
 
 h2 {
-  font-family: 'Mona Sans';
-  letter-spacing: -0.01em;
-  font-weight: bold;
-  border-bottom: #0B1575 1px;
+    font-family: 'Mona Sans';
+    letter-spacing: -0.01em;
+    font-weight: bold;
+    border-bottom: #0B1575 1px;
 }
 
 h3, h4, h5, h6 {
-  font-family: 'VCR OCD Faux';
-  letter-spacing: -0.01em;
-  border-bottom: #0B1575 1px;
+    font-family: 'VCR OCD Faux';
+    letter-spacing: -0.01em;
+    border-bottom: #0B1575 1px;
+}
+
+.nav-tabs.nav-justified > li > a {
+    color: #202020;
 }
