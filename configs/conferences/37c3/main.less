@@ -84,12 +84,10 @@ nav .navbar-brand {
 }
 
 .congress {
-    background-image: url(37c3-key-visual.svg);
+    background-image: url(37c3-key-visual.jpg);
     background-repeat: no-repeat;
-    background-size: 400px 600px;
 
     position: fixed;
-    left: -50px;
     //bottom: 100px;
 
     width: 400px;
@@ -104,9 +102,9 @@ nav .navbar-brand {
 }
 
 .congress-motto {
-    background-image: url(37c3-logo-full.svg);
+    /*background-image: url(37c3-logo-full.svg);
     background-repeat: no-repeat;
-    background-size: 116px 780px;
+    background-size: 116px 780px;*/
 
     position: fixed;
     right: 10px;
@@ -205,15 +203,36 @@ nav .navbar-brand {
 
 }
 
-.panel, .panel-default > .panel-heading {
-    border-color: @blue;
+.roomtitle {
+    font-family: 'VCR OCD Faux';
+    font-size: 1.3em;
+    color: @green;
+}
+
+.panel-default {
+	border-color: @blue;
+   .panel-heading {
+	a {
+	    color: #7a7a7a;
+	}
+	background-color: #0b1575;
+	border-color: @blue; /* override bottom border */
+	color: #7a7a7a;
+    }
+    .panel-body {
+	background-color: #202020;
+	color: @yellow;
+    }
+}
+.recordings a {
+    font-family: 'VCR OCD Faux';
 }
 
 .t {
     color: #F6F675;
 }
 
-.panel-title, .panel-body, a {
+a {
     color: #70FF53;
 }
 a:hover {
@@ -250,4 +269,42 @@ h3, h4, h5, h6 {
 
 .nav-tabs.nav-justified > li > a {
     color: #202020;
+}
+
+.schedule {
+    border-color: #0b1575 !important;
+}
+
+.schedule {
+    .block {
+	h3 {
+	    font-size: 1.2em !important;
+	    padding-bottom: 0.1em;
+	    margin-bottom: 0;
+	}
+	h4 {
+	    color: #d9d9d9 !important;
+	}
+	h5 {
+	    color: #de37ff !important;
+	}
+    }
+    .block:nth-child(2n) {
+	background-color: #202020;
+    }
+    .block:nth-child(2n+1) {
+	/*background-color: #0B1575;*/
+    }
+
+    .block.pause, .block.optout {
+	background-color: #202020 !important;
+    }
+    .block.gap {
+	background-color: #006b6b !important;
+    }
+}
+#schedule-event-detail-popover #modal-body
+{
+	background-color: #202020;
+	color: #ffffff;
 }
