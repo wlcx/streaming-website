@@ -14,7 +14,7 @@
 @dark: #242424;
 
 
-@brand-primary: @blue;
+@brand-primary: @magenta;
 @well-bg: @dark;
 @navbar-default-bg: @grey-lighter;
 @btn-default-bg: @cyan;
@@ -22,7 +22,7 @@
 @panel-default-text: @blue;
 @panel-bg: @dark;
 @schedule-bg: @dark;
-@schedule-selected-room: @cyan;
+@schedule-selected-room: #006b6b;
 @schedule-now-bg: @red;
 
 @font-face {
@@ -288,6 +288,7 @@ h3, h4, h5, h6 {
 	h5 {
 	    color: #de37ff !important;
 	}
+	border: 1px solid #0b1575 !important;
     }
     .block:nth-child(2n) {
 	background-color: #202020;
@@ -298,13 +299,18 @@ h3, h4, h5, h6 {
 
     .block.pause, .block.optout {
 	background-color: #202020 !important;
+	background-image: linear-gradient(45deg, #757501ff 25%, transparent 25%, transparent 50%, #757501ff 50%, #757501ff 75%, transparent 75%, transparent) !important;
     }
     .block.gap {
 	background-color: #006b6b !important;
     }
 }
-#schedule-event-detail-popover #modal-body
-{
+#schedule-event-detail-popover #modal-body {
 	background-color: #202020;
 	color: #ffffff;
+}
+
+#schedule-event-detail-popover {
+    background-color: @red;
+    border-color: #561010;
 }
